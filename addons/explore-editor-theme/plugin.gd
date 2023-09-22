@@ -12,7 +12,7 @@ func _enter_tree():
 	dialog_instance.editor_plugin = self
 	get_editor_interface().get_base_control().add_child(dialog_instance)
 
-	var godot_theme = get_editor_interface().get_base_control().theme
+	var godot_theme = EditorInterface.get_editor_theme()
 	dialog_instance.editor_theme = godot_theme
 	dialog_instance.filesystem_changed.connect(self._rescan_filesystem)
 
